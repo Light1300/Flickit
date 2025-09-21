@@ -1,0 +1,12 @@
+# Virtual environment
+venv/
+cv_env/
+__pycache__/
+*.pyc
+
+# Git files
+.git/
+.gitignore
+
+# Output directory
+output/

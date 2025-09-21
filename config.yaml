@@ -1,0 +1,70 @@
+# Football Touch Detection Configuration
+
+# Video Processing Settings
+video:
+  input_path: "input/sample_video.mp4"
+  output_path: "output/annotated_video.mp4"
+  fps: 30
+  resize_width: 1280
+  resize_height: 720
+
+# Detection Parameters
+detection:
+  pose_confidence: 0.5
+  tracking_confidence: 0.5
+  ball_detection_confidence: 0.7
+  touch_threshold_pixels: 80
+  touch_cooldown_frames: 15
+  
+# Ball Detection Settings
+ball_detection:
+  # HSV ranges for ball color detection
+  orange_ball:
+    lower_hsv: [10, 50, 50]
+    upper_hsv: [25, 255, 255]
+  white_ball:
+    lower_hsv: [0, 0, 200]
+    upper_hsv: [180, 30, 255]
+  
+  # Size constraints (in pixels)
+  min_area: 100
+  max_area: 10000
+  min_circularity: 0.6
+
+# Player Tracking Settings
+player_tracking:
+  velocity_scale_factor: 100
+  position_history_length: 5
+  velocity_smoothing_frames: 3
+
+# Visualization Settings
+visualization:
+  overlay_alpha: 0.8
+  pose_line_thickness: 2
+  pose_circle_radius: 2
+  ball_circle_radius: 20
+  text_font_scale: 0.7
+  text_thickness: 2
+  
+  colors:
+    pose_landmarks: [0, 255, 0]    # Green
+    pose_connections: [0, 0, 255]  # Red
+    ball_tracking: [0, 255, 255]   # Yellow
+    left_touch: [255, 0, 0]        # Blue
+    right_touch: [0, 0, 255]       # Red
+    text: [255, 255, 255]          # White
+
+# Output Settings
+output:
+  save_analysis_json: true
+  save_touch_events: true
+  generate_report: true
+  video_codec: "mp4v"
+  
+# Advanced Settings
+advanced:
+  use_gpu: false
+  batch_processing: false
+  multi_threading: false
+  debug_mode: false
+  save_debug_frames: false

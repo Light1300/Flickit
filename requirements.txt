@@ -1,0 +1,37 @@
+# Football Touch Detection System Requirements
+# Install with: pip install -r requirements.txt
+
+# Core Computer Vision
+opencv-python>=4.8.0
+opencv-contrib-python>=4.8.0
+
+# Pose Estimation
+mediapipe>=0.10.0
+
+# Scientific Computing
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Data Visualization
+matplotlib>=3.7.0
+
+# Deep Learning (Optional - for advanced ball detection)
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics>=8.0.0
+
+# Data Handling
+pandas>=2.0.0
+pillow>=9.5.0
+
+# Progress Tracking
+tqdm>=4.65.0
+
+# Configuration
+pyyaml>=6.0
+
+# Video Processing
+imageio>=2.28.0
+imageio-ffmpeg>=0.4.8
+
+
